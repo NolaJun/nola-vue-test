@@ -12,5 +12,5 @@
 
 ```npm install --save vue-i18n```
 
-4、
+4、jest
 

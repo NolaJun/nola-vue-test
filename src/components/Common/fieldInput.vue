@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { Field } from 'vant';
+import { Field } from 'vant'
 export default {
   name: 'Field',
   components: {
@@ -73,28 +73,28 @@ export default {
   data() {
     return {
       fieldValue: this.inputData
-    };
+    }
   },
   watch: {
     inputData(val, oldVal) {
-      if (val !== oldVal) this.fieldValue = val;
+      if (val !== oldVal) this.fieldValue = val
     }
   },
   destroyed() {
-    Object.assign(this.$data, this.$options.data());
+    Object.assign(this.$data, this.$options.data())
   },
   methods: {
-    clearData(e) {
-      this.$emit('updateText', this.fieldValue);
+    clearData () {
+      this.$emit('updateText', this.fieldValue)
     },
     inputText(val) {
-      this.$emit('updateText', val);
+      this.$emit('updateText', val)
     },
     clickText() {
-      this.$emit('clickText');
+      this.$emit('clickText')
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
