@@ -1,5 +1,5 @@
-import { GetOpenid } from '../../../static/js/global/global';
-import storage from '../../../static/js/util/storage';
+import { GetOpenid } from '../../static/js/global/global';
+import storage from '../../static/js/util/storage';
 const state = {
   token: {
     access_token:

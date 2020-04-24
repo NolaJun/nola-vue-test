@@ -45,7 +45,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .van-cell-group__title {
   padding: 20px 10px;
   line-height: 2;

@@ -68,7 +68,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .van-field__button {
   width: 5rem !important;
 }

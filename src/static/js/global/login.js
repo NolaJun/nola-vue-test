@@ -1,8 +1,8 @@
 import { makeApi } from '../util/apiHttp'
-import store from '../../../src/store'
+import store from '../../../store'
 import { Set } from '../util/storage'
 import { getUrlKey } from '../util/data'
-import router, { resetRouter } from '../../../src/router'
+import router, { resetRouter } from '../../../router'
 import { GetAppid } from './global'
 
 export const generateRoute = async (menus = []) => {

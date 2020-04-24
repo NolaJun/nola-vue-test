@@ -55,10 +55,10 @@
   </van-tabbar>
 </template>
 <script>
-import { Tabbar, TabbarItem } from 'vant';
-import { GetOpenid } from '../../../static/js/global/global';
-import { Get } from '../../../static/js/util/storage';
-import { notify } from '../../../static/js/util/message';
+import { Tabbar, TabbarItem } from 'vant'
+import { GetOpenid } from '../../static/js/global/global'
+import { Get } from '../../static/js/util/storage'
+import { notify } from '../../static/js/util/message'
 export default {
   name: 'Footer',
   components: {
@@ -68,33 +68,33 @@ export default {
   data() {
     return {
       active: 'Index'
-    };
+    }
   },
   computed: {
     current: {
       get: function() {
-        return this.$route.name;
+        return this.$route.name
       },
       set: function(v) {
-        this.active = v;
+        this.active = v
       }
     }
   },
   methods: {
     changeTab(obj) {
-      this.active = obj;
-      let current = '/' + obj;
+      this.active = obj
+      let current = '/' + obj
       if (
         Get(GetOpenid(), 'guest') === 1 &&
         (obj === 'Index' || obj === 'upcoming' || obj === 'Features')
       )
-        return notify('org.valid.no_shop');
-      this.$router.push(current);
+        return notify('org.valid.no_shop')
+      this.$router.push(current)
     }
   }
-};
+}
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .van-tabbar {
   height: 104px;
   border: 0;

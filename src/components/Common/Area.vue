@@ -26,8 +26,8 @@
 <script>
 import fieldInput from './fieldInput';
 import { Area, Cell, Popup } from 'vant';
-import { AuthPost } from '../../../static/js/util/apiHttp';
-import { Get, Set } from '../../../static/js/util/storage';
+import { AuthPost } from '../../static/js/util/apiHttp';
+import { Get, Set } from '../../static/js/util/storage';
 export default {
   name: 'Area',
   components: {
@@ -87,7 +87,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .van-cell {
   font-size: 28px;
 }

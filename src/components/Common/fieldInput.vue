@@ -97,7 +97,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .default-input {
   font-size: 24px;
   padding-left: 20px;

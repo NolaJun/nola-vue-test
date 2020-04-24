@@ -54,8 +54,8 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-@import '../../../static/css/color';
+<style lang="scss" scoped>
+@import ' ../../static/css/color';
 .grid {
   .grid-item {
     margin: 10px 0;

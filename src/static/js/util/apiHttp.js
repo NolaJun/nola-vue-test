@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 import { Get } from './storage'
-import store from '../../../src/store'
+import store from '../../../store'
 import { GetAppid, GetOpenid } from '../global/global'
 // import { errorResponse } from './message'
 import { errorResponse, responseRoute } from './message'

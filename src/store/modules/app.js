@@ -1,5 +1,5 @@
-import storage from '../../../static/js/util/storage';
-import { GetAppid } from '../../../static/js/global/global';
+import storage from '../../static/js/util/storage';
+import { GetAppid } from '../../static/js/global/global';
 
 const state = {
   api: '',

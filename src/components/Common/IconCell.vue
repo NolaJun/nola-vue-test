@@ -62,8 +62,8 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
-@import "../../../static/css/common.less";
+<style lang="scss" scoped>
+@import " ../../static/css/common.scss";
 .cell-content {
   padding-right: 30px;
   box-sizing: border-box;

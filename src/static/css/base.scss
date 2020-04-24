@@ -1,9 +1,6 @@
 *{
   font-size: 28px;
-  //&:after{
-  //  content: '';
   box-sizing: border-box;
-  //}
 }
 
 // 阻止屏幕旋转时字体自动调整
@@ -109,50 +106,50 @@ a {
 }
 
 // 圆角及边框
-.border-radius(@radius: 5px) {
-  border-radius: @radius;
+.border-radius($radius: 5px) {
+  border-radius: $radius;
 }
 
-.border-top-radius(@radius: 5px) {
-  border-top-right-radius: @radius;
-  border-top-left-radius: @radius;
+.border-top-radius($radius: 5px) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
 }
 
-.border-right-radius(@radius: 5px) {
-  border-bottom-right-radius: @radius;
-  border-top-right-radius: @radius;
+.border-right-radius($radius: 5px) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
 }
 
-.border-bottom-radius(@radius: 5px) {
-  border-bottom-right-radius: @radius;
-  border-bottom-left-radius: @radius;
+.border-bottom-radius($radius: 5px) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 
-.border-left-radius(@radius: 5px) {
-  border-bottom-left-radius: @radius;
-  border-top-left-radius: @radius;
+.border-left-radius($radius: 5px) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
 }
 
-.box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
-  -webkit-box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  box-shadow: @arguments;
+.box-shadow($x: 0; $y: 0; $blur: 1px; $color: #000) {
+  -webkit-box-shadow: $arguments;
+  -moz-box-shadow: $arguments;
+  box-shadow: $arguments;
 }
 
-.border(@width: 1PX; @style:solid; @color: #ccc){
-  border: @width @style @color;
+.border($width: 1PX; $style:solid; $color: #ccc){
+  border: $width $style $color;
 }
-.border-left(@width: 1PX; @style:solid; @color: #ccc){
-  border-left: @width @style @color;
+.border-left($width: 1PX; $style:solid; $color: #ccc){
+  border-left: $width $style $color;
 }
-.border-right(@width: 1PX; @style:solid; @color: #ccc){
-  border-right: @width @style @color;
+.border-right($width: 1PX; $style:solid; $color: #ccc){
+  border-right: $width $style $color;
 }
-.border-top(@width: 1PX; @style:solid; @color: #ccc){
-  border-top: @width @style @color;
+.border-top($width: 1PX; $style:solid; $color: #ccc){
+  border-top: $width $style $color;
 }
-.border-bottom(@width: 1PX; @style:solid; @color: #ccc){
-  border-bottom: @width @style @color;
+.border-bottom($width: 1PX; $style:solid; $color: #ccc){
+  border-bottom: $width $style $color;
 }
 
 .font-10{
@@ -182,8 +179,8 @@ a {
 .font-34{
   font-size: 68px;
 }
-.line-height(@height: normal) {
-  line-height: @height;
+.line-height($height: normal) {
+  line-height: $height;
 }
 .line-height-default{
   .line-height;

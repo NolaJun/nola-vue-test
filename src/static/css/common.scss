@@ -1,5 +1,5 @@
-@import "color";
-@import "base";
+@import "color.scss";
+@import "base.scss";
 .full-width{
   width: 100%;
 }
@@ -29,7 +29,7 @@
   padding: 10px 30px;
   &.input-border{
     .border-radius(100PX);
-    .border(1px; solid; @grey);
+    .border(1px, solid, $grey);
   }
   .van-field__error-message{
     font-size: 20px;
@@ -132,7 +132,7 @@
     .border-radius(50%);
     overflow: hidden;
     margin: auto;
-    background: @light-grey;
+    background: $light-grey;
     img{
       width: 100%;
     }

@@ -2,10 +2,11 @@ import { Toast, Dialog } from 'vant'
 import { transform } from './vuei18n'
 import { Remove } from './storage'
 import { GetOpenid } from '../global/global'
-import router from '../../../src/router'
+import router from '../../../router'
 
 export const errorResponse = error => {
   let response = {}
+  // eslint-disable-next-line no-prototype-builtins
   if (error.hasOwnProperty('response')) {
     response = error.response.data
     response.status = 'error'

@@ -39,8 +39,8 @@
 </template>
 <script>
 import { Field, Button } from 'vant';
-import { notify } from '../../../static/js/util/message';
-import { ajaxPost } from '../../../static/js/util/apiHttp';
+import { notify } from '../../static/js/util/message';
+import { ajaxPost } from '../../static/js/util/apiHttp';
 export default {
   name: 'CheckCodeField',
   components: {
@@ -143,7 +143,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .slot-button {
   margin: auto;
   border-radius: 0.5rem;

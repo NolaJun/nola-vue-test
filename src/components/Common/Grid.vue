@@ -51,10 +51,10 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-@import "../../../static/css/common.less";
+<style lang="scss" scoped>
+@import " ../../static/css/common.scss";
 </style>
-<style lang="less">
+<style lang="scss">
 .grid {
   .van-icon__image {
     width: 60px !important;

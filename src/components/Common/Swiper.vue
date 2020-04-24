@@ -94,7 +94,7 @@ export default {
   }
 };
 </script>
-<style lang="less">
+<style lang="scss">
 .detail-swiper {
   width: 100%;
   overflow: hidden;

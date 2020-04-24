@@ -1,0 +1,31 @@
+@import '../../static/css/common.scss';
+.row-top{
+  margin-top: 40px;
+}
+.banner-register{
+  width: 750px;
+  height: 456px;
+  background: url("../../static/img/banner.jpg")  center no-repeat;
+  background-size: cover;
+  .logo{
+    width: 110px;
+    height: auto;
+    min-height: 78px;
+    margin: 170px auto 0;
+    display: block;
+  }
+  .register-title{
+    font-size: 52px;
+    .text-center;
+  }
+}
+.form-input {
+  .van-field__left-icon {
+    .icon-mobile{
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

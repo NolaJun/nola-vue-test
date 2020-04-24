@@ -1,104 +1,104 @@
-@white: #FFF;
-@black: #000;
-@dark-black: #333;
-@light-black: #999;
-@lighter-black: #ddd;
-@blue: #4768F3;
-@light-blue: #2F9BFE;
-@grey: #c1c1c1;
-@light-grey: #F2F3F9;
-@dark-grey: #D3DBE3;
-@orange: #ec7e49;
-@dark-red: #f00;
-@red: #ec7e49;
-@light-orange: #ffa216;
-@green: #22b350;
+$white: #FFF;
+$black: #000;
+$dark-black: #333;
+$light-black: #999;
+$lighter-black: #ddd;
+$blue: #4768F3;
+$light-blue: #2F9BFE;
+$grey: #c1c1c1;
+$light-grey: #F2F3F9;
+$dark-grey: #D3DBE3;
+$orange: #ec7e49;
+$dark-red: #f00;
+$red: #ec7e49;
+$light-orange: #ffa216;
+$green: #22b350;
 .bg-dark-red{
-  background-color: @dark-red;
+  background-color: $dark-red;
 }
 .dark-red{
-  color: @dark-red;
+  color: $dark-red;
 }
 .bg-green{
-  background-color: @green;
+  background-color: $green;
 }
 .green{
-  color: @green;
+  color: $green;
 }
 .light-orange{
-  color: @light-orange;
+  color: $light-orange;
 }
 .bg-light-orange{
-  background-color: @light-orange;
+  background-color: $light-orange;
 }
 .orange{
-  color: @orange;
+  color: $orange;
 }
 .bg-orange{
-  background-color: @orange;
+  background-color: $orange;
 }
 .black{
-  color: @black;
+  color: $black;
 }
 .dark-black{
-  color: @dark-black;
+  color: $dark-black;
 }
 .lighter-black{
-  color: @lighter-black;
+  color: $lighter-black;
 }
 .light-black{
-  color: @light-black;
+  color: $light-black;
 }
 .white{
-  color: @white;
+  color: $white;
 }
 .bg-white{
-  background-color: @white;
+  background-color: $white;
 }
 .light-grey{
-  color: @light-grey;
+  color: $light-grey;
 }
 .grey{
-  color: @grey;
+  color: $grey;
 }
 .bg-grey{
-  background-color: @grey;
+  background-color: $grey;
 }
 .bg-light-grey{
-  background-color: @light-grey;
+  background-color: $light-grey;
 }
 .dark-grey{
-  color: @dark-grey;
+  color: $dark-grey;
 }
 .bg-dark-grey{
-  background-color: @dark-grey;
+  background-color: $dark-grey;
 }
 .blue{
-  color: @blue;
+  color: $blue;
 }
 .bg-blue{
-  background-color: @blue;
+  background-color: $blue;
 }
 .light-blue{
-  color: @light-blue;
+  color: $light-blue;
 }
 .bg-light-blue{
-  background-color: @light-blue;
+  background-color: $light-blue;
 }
 .border-light-blue{
-  border-color: @light-blue;
+  border-color: $light-blue;
 }
 .border-blue{
-  border-color: @blue;
+  border-color: $blue;
 }
 .border-white{
-  border-color: @white;
+  border-color: $white;
 }
 .border-grey{
-  border-color: @grey;
+  border-color: $grey;
 }
 .border-orange{
-  border-color: @orange;
+  border-color: $orange;
 }
 
 /*文字颜色渐变*/
