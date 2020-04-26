@@ -38,9 +38,9 @@
   </van-field>
 </template>
 <script>
-import { Field, Button } from 'vant';
-import { notify } from '../../static/js/util/message';
-import { ajaxPost } from '../../static/js/util/apiHttp';
+import { Field, Button } from 'vant'
+import { notify } from '../../static/js/util/message'
+import { ajaxPost } from '../../static/js/util/apiHttp'
 export default {
   name: 'CheckCodeField',
   components: {
@@ -75,73 +75,73 @@ export default {
       flag: false,
       times: 60,
       timer: null // 定时器名称
-    };
+    }
   },
   activated() {
-    this.inputVal = this.inputData;
+    this.inputVal = this.inputData
   },
   beforeDestroy() {
-    clearInterval(this.timer);
-    Object.assign(this.$data, this.$options.data());
+    clearInterval(this.timer)
+    Object.assign(this.$data, this.$options.data())
   },
   watch: {
     inputData(val, old) {
-      if (val !== old) this.carPlate = val;
+      if (val !== old) this.carPlate = val
     },
     buttonLable(val, old) {
-      if (val !== old) this.$forceUpdate();
+      if (val !== old) this.$forceUpdate()
     },
     disabled(val, old) {
-      if (val !== old) this.$forceUpdate();
+      if (val !== old) this.$forceUpdate()
     },
     readonly(val, old) {
-      if (val !== old) this.$forceUpdate();
+      if (val !== old) this.$forceUpdate()
     },
     mobile(val) {
-      return val;
+      return val
     }
   },
   methods: {
     getCheckCode() {
-      let that = this;
+      let that = this
       if (this.readonly && this.mobile.length !== 11)
-        return notify('login.new_mobile');
-      if (that.flag) return;
-      that.flag = true;
+        return notify('login.new_mobile')
+      if (that.flag) return
+      that.flag = true
       let params = {
         // 获取验证码所需参数
         mobile: that.mobile
-      };
-      if (that.type === 2) params.org_id = this.orgId;
-      that.timeCountDown();
+      }
+      if (that.type === 2) params.org_id = this.orgId
+      that.timeCountDown()
 
       ajaxPost(this.codeUrl, params).then(res => {
         if (res.code === 200) {
-          notify('tip.check_code');
+          notify('tip.check_code')
         } else {
-          clearInterval(that.timer);
-          that.flag = false;
-          that.times = 60;
+          clearInterval(that.timer)
+          that.flag = false
+          that.times = 60
         }
-      });
+      })
     },
     timeCountDown() {
-      let that = this;
+      let that = this
       that.timer = setInterval(() => {
         if (that.times === 0) {
-          clearInterval(that.timer);
-          that.flag = false;
-          that.times = 60;
+          clearInterval(that.timer)
+          that.flag = false
+          that.times = 60
         } else {
-          that.times--;
+          that.times--
         }
-      }, 1000);
+      }, 1000)
     },
     updateText() {
-      if (!this.readonly) this.$emit('updateText', this.inputVal);
+      if (!this.readonly) this.$emit('updateText', this.inputVal)
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .slot-button {

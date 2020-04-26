@@ -44,6 +44,4 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-@import ' ../../static/css/base.scss';
-</style>
+<style lang="scss" src="../../static/css/base.scss" scoped></style>

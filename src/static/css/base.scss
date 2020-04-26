@@ -106,54 +106,88 @@ a {
 }
 
 // 圆角及边框
-$radius: 5px;
-.border-radius{
+@mixin border-radius($radius: 5px){
   border-radius: $radius;
 }
+.border-radius{
+  @include border-radius;
+}
 
-.border-top-radius {
+@mixin border-top-radius($radius: 5px) {
   border-top-right-radius: $radius;
   border-top-left-radius: $radius;
 }
 
-.border-right-radius {
+@mixin border-right-radius($radius: 5px) {
   border-bottom-right-radius: $radius;
   border-top-right-radius: $radius;
 }
 
-.border-bottom-radius {
+@mixin border-bottom-radius($radius: 5px) {
   border-bottom-right-radius: $radius;
   border-bottom-left-radius: $radius;
 }
 
-.border-left-radius {
+@mixin border-left-radius($radius: 5px) {
   border-bottom-left-radius: $radius;
   border-top-left-radius: $radius;
 }
 
-@mixin box-shadow($x: 0; $y: 0; $blur: 1px; $color: #000) {
+@mixin box-shadow($x: 0, $y: 0, $blur: 1, $color: #000) {
+  -webkit-box-shadow: $x, $y, $blur, $color;
+  -moz-box-shadow: $x, $y, $blur, $color;
+  box-shadow: $x, $y, $blur, $color;
+}
+//
+//@mixin box-shadow($shadows...) {
+//  -webkit-box-shadow: $shadows;
+//  -moz-box-shadow: $shadows;
+//  box-shadow: $shadows;
+//}
 
-}
-.box-shadow($x: 0; $y: 0; $blur: 1px; $color: #000) {
-  -webkit-box-shadow: $arguments;
-  -moz-box-shadow: $arguments;
-  box-shadow: $arguments;
+.box-shadow {
+  @include box-shadow(0, 0, 1, #000);
 }
 
-.border($width: 1PX; $style:solid; $color: #ccc){
-  border: $width $style $color;
+@mixin border($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
 }
-.border-left($width: 1PX; $style:solid; $color: #ccc){
-  border-left: $width $style $color;
+.border {
+  @include border(1px, solid, #ccc);
 }
-.border-right($width: 1PX; $style:solid; $color: #ccc){
-  border-right: $width $style $color;
+@mixin border-left($width: 1px, $style: solid, $color: #ccc) {
+  border-left-width: $width;
+  border-left-style: $style;
+  border-left-color: $color;
 }
-.border-top($width: 1PX; $style:solid; $color: #ccc){
-  border-top: $width $style $color;
+.border-left{
+  @include border-left();
 }
-.border-bottom($width: 1PX; $style:solid; $color: #ccc){
-  border-bottom: $width $style $color;
+@mixin border-right($width: 1px, $style: solid, $color: #ccc) {
+  border-right-width: $width;
+  border-right-style: $style;
+  border-right-color: $color;
+}
+.border-right{
+  @include border-right;
+}
+@mixin border-top($width: 1px, $style: solid, $color: #ccc) {
+  border-top-width: $width;
+  border-top-style: $style;
+  border-top-color: $color;
+}
+.border-top{
+  @include border-top;
+}
+@mixin border-bottom($width: 1px, $style: solid, $color: #ccc) {
+  border-bottom-width: $width;
+  border-bottom-style: $style;
+  border-bottom-color: $color;
+}
+.border-bottom{
+  @include border-bottom;
 }
 
 .font-10{
@@ -183,12 +217,12 @@ $radius: 5px;
 .font-34{
   font-size: 68px;
 }
-.line-height($height: normal) {
+@mixin line-height($height: normal) {
   line-height: $height;
 }
 .line-height-default{
-  .line-height;
+  @include line-height;
 }
 .line-height-double{
-  .line-height(2);
+  @include line-height(2);
 }

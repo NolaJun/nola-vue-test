@@ -1,22 +1,22 @@
-// import Index from '@/views/Index/Index.vue';
-import Vue from 'vue';
-import { shallowMount } from '@vue/test-utils';
-import iconGrid from '../../src/components/Common/iconGrid';
-import vant from 'vant';
+import Vue from 'vue'
+import vant from 'vant'
+import { shallowMount } from '@vue/test-utils'
+
 Vue.use(vant)
+
 describe('iconGrid.vue', () => {
   // 组件实例
-  const Constructor = Vue.extend(iconGrid);
+  const Constructor = Vue.extend(iconGrid)
 
   // 挂载组件
   const iconGrid = new Constructor({
     propsData: {
       propMsg: 'hello world'
     }
-  }).$mount();
+  }).$mount()
 
   it('renders props.coulumnNum when passed', () => {
-    const coulumnNum = 5;
+    const coulumnNum = 5
     const list = [
       {
         id: 0,
@@ -44,14 +44,14 @@ describe('iconGrid.vue', () => {
         icon: 'icon-kuaijiekaidan gradient-text-blue2',
         title: '快捷开单'
       }
-    ];
+    ]
     const wrapper = shallowMount(iconGrid, {
       propsData: {
         coulumnNum: coulumnNum,
         list: list
       }
-    });
-    expect(wrapper.isVueInstance()).toBeTruthy();
+    })
+    expect(wrapper.isVueInstance()).toBeTruthy()
     // expect(wrapper.text()).toMatch(msg);
-  });
-});
+  })
+})

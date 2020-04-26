@@ -16,7 +16,7 @@
   }
   .register-title{
     font-size: 52px;
-    .text-center;
+    @extend .text-center;
   }
 }
 .form-input {

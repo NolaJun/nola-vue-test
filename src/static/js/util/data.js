@@ -6,7 +6,7 @@ import { Set } from './storage'
  */
 export const firstObj = obj => {
   for (let k in obj) {
-    if (Object.prototype.call().hasOwnProperty(k)) return obj[k]
+    if (Object.prototype.hasOwnProperty.call(obj, k)) return obj[k]
     // if (obj.hasOwnProperty(k)) return obj[k]
   }
 }

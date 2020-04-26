@@ -4,5 +4,5 @@ const index = [
     path: '/Index',
     components: () => import('../../views/Home.vue')
   }
-];
-export default index;
+]
+export default index

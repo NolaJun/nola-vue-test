@@ -28,8 +28,8 @@
   line-height: 2.5;
   padding: 10px 30px;
   &.input-border{
-    .border-radius(100PX);
-    .border(1px, solid, $grey);
+    @include border-radius(100PX);
+    @include border(1px, solid, $grey);
   }
   .van-field__error-message{
     font-size: 20px;
@@ -80,8 +80,8 @@
     padding: 0px 30px;
     height: 100px;
     line-height: 100px;
-    .font-16;
-    .dark-black;
+    @extend .font-16;
+    @extend .dark-black;
     .van-cell__left-icon, .van-cell__right-icon{
       height: 100px;
       line-height: 100px;
@@ -109,14 +109,14 @@
     }
   }
   .iconfont{
-    .font-20;
+    @extend .font-20;
     margin-right: 35px;
   }
   .icon-bg{
     width: 46px;
     height: 46px;
-    .border-radius(10px);
-    .text-center;
+    @include border-radius(10px);
+    @extend .text-center;
     margin-top: 26px;
     line-height: 46px;
   }
@@ -129,7 +129,7 @@
   &-img{
     width: 80px;
     height: 80px;
-    .border-radius(50%);
+    @include border-radius(50%);
     overflow: hidden;
     margin: auto;
     background: $light-grey;

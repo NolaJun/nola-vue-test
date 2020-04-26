@@ -1,4 +1,4 @@
-import { asyncRoutes, baseRoutes } from '../../router';
+import { asyncRoutes, baseRoutes } from '../../router'
 
 /**
  * Use meta.role to determine if the current user has permission
@@ -6,10 +6,10 @@ import { asyncRoutes, baseRoutes } from '../../router';
  * @param route
  */
 function hasPermission(menus, route) {
-  let flag = false;
+  let flag = false
   if (route.name) {
-    flag = menus.some(menu => menu === route.name);
-    return flag;
+    flag = menus.some(menu => menu === route.name)
+    return flag
   }
 }
 
@@ -19,41 +19,41 @@ function hasPermission(menus, route) {
  * @param menus
  */
 export function filterAsyncRoutes(routes, menus) {
-  let res = [];
+  let res = []
   routes.forEach(route => {
-    let tmp = { ...route };
+    let tmp = { ...route }
     if (hasPermission(menus, tmp) || tmp.name === 'Index') {
-      res.push(tmp);
+      res.push(tmp)
     }
-  });
-  return res;
+  })
+  return res
 }
 
 const state = {
   routes: [],
   addRoutes: []
-};
+}
 
 const mutations = {
   SET_ROUTES: (state, routes) => {
-    state.addRoutes = routes;
-    state.routes = baseRoutes.concat(routes);
+    state.addRoutes = routes
+    state.routes = baseRoutes.concat(routes)
   }
-};
+}
 
 const actions = {
   generateRoutes({ commit }, menus) {
     return new Promise(resolve => {
-      let routes = filterAsyncRoutes(asyncRoutes, menus);
-      commit('SET_ROUTES', routes);
-      resolve(routes);
-    });
+      let routes = filterAsyncRoutes(asyncRoutes, menus)
+      commit('SET_ROUTES', routes)
+      resolve(routes)
+    })
   }
-};
+}
 
 export default {
   namespaced: true,
   state,
   mutations,
   actions
-};
+}

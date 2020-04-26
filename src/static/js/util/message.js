@@ -38,13 +38,14 @@ export const responseRoute = (response, type = 1) => {
       }
       break
     case 404:
-      if (response.hasOwnProperty('message'))
+      if (Object.prototype.hasOwnProperty.call(response, 'message'))
+      // if (response.hasOwnProperty('message'))
         return message(response.message, type)
       break
     case 422:
       if (
-        response.hasOwnProperty('errors') &&
-        response.hasOwnProperty('message')
+        Object.prototype.hasOwnProperty.call(response, 'errors') &&
+        Object.prototype.hasOwnProperty.call(response, 'message')
       ) {
         return alertBox(response.errors[0])
       }
