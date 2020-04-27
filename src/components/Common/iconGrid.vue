@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { Grid, GridItem, Image } from 'vant';
+import { Grid, GridItem, Image } from 'vant'
 export default {
   name: 'GridSection',
   components: {
@@ -32,14 +32,14 @@ export default {
     list: {
       type: Array,
       default: () => {
-        return [];
+        return []
       }
     }
   },
   data() {
     return {
       active: null
-    };
+    }
   },
   computed: {},
   watch: {},
@@ -48,10 +48,10 @@ export default {
   destroyed() {},
   methods: {
     itemClick(item) {
-      this.$emit('gridItem', item);
+      this.$emit('gridItem', item)
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

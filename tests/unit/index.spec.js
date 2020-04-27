@@ -1,20 +1,12 @@
 import Vue from 'vue'
 import vant from 'vant'
 import { shallowMount } from '@vue/test-utils'
+import iconGrid from '../../src/components/Common/iconGrid'
 
 Vue.use(vant)
 
 describe('iconGrid.vue', () => {
   // 组件实例
-  const Constructor = Vue.extend(iconGrid)
-
-  // 挂载组件
-  const iconGrid = new Constructor({
-    propsData: {
-      propMsg: 'hello world'
-    }
-  }).$mount()
-
   it('renders props.coulumnNum when passed', () => {
     const coulumnNum = 5
     const list = [
@@ -52,6 +44,6 @@ describe('iconGrid.vue', () => {
       }
     })
     expect(wrapper.isVueInstance()).toBeTruthy()
-    // expect(wrapper.text()).toMatch(msg);
+    // expect(wrapper.text()).toMatch(list)
   })
 })
